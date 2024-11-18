@@ -14,6 +14,9 @@ mesafe <- sqrt(sum((sayilar1 - sayilar2)^2))
 # Mesafeyi yazdır
 print(mesafe)
 
+
+#ÇIKTILAR: 12.29
+
 #*************************************************************************************************************************
 
 # Manhattan Mesafesi Hesaplama
@@ -35,6 +38,9 @@ manhattan_mesafe <- sum(abs(sayilar1 - sayilar2))
 # Mesafeyi yazdır
 print(manhattan_mesafe)
 
+
+#ÇIKTILAR: 19
+
 #***************************************************************************************************************************
 
 ## Minkowski Mesafesi Hesaplama (p=3)
@@ -53,6 +59,11 @@ minkowski_mesafe <- (sum(abs(sayilar1 - sayilar2)^p))^(1/p)
 
 # Mesafeyi yazdır
 print(minkowski_mesafe)
+
+#ÇIKTILAR: 11.03
+#***************************************************************************************************************************
+
+
 
 
 
