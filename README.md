@@ -25,6 +25,10 @@ print(mesafe)
 Aşağıdaki R kodu, iki vektör arasındaki Manhattan mesafesini hesaplamak için kullanılabilir:
 
 ```r
+# İki vektör
+sayilar1 <- c(12, 15, 29, 40)
+sayilar2 <- c(5, 14, 30, 50)
+
 # Manhattan mesafesini hesapla
 manhattan_mesafe <- sum(abs(sayilar1 - sayilar2))
 
