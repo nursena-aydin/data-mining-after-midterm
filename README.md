@@ -63,6 +63,56 @@ print(minkowski_mesafe)
 #ÇIKTILAR: 11.03
 #***************************************************************************************************************************
 
+# Öklid ve Manhattan Mesafesi Hesaplama
+
+Bu örnekte, bir veri çerçevesindeki (data frame) sayısal sütunlar arasındaki **Öklid** ve **Manhattan mesafelerini** hesaplamak için R dilinde bir kod bulunmaktadır.
+
+Öncelikle aşağıdaki veri çerçevesine sahibiz:
+
+```r
+data <- data.frame(
+  Urun = c("A", "B", "C"),
+  Fiyat = c(150, 100, 255),
+  Kalite = c(3.4, 4.5, 5.3)
+)
+
+
+# Öklid mesafesini hesapla
+oklid_mesafesi2 <- dist(data[,-1], method = "euclidean")
+print(as.matrix(oklid_mesafesi2))
+
+#ÇIKTI:
+         1        2        3
+1   0.0000  50.0121 105.0172
+2  50.0121   0.0000 155.0021
+3 105.0172 155.0021   0.0000
+
+
+# Manhattan mesafesini hesapla
+manhattan_mesafesi2 <- dist(data[,-1], method = "manhattan")
+print(as.matrix(manhattan_mesafesi2))
+
+#ÇIKTI:
+      1     2     3
+1   0.0  51.1 106.9
+2  51.1   0.0 155.8
+3 106.9 155.8   0.0
+
+ÖDEV:
+Bu veriseti için Minkovski mesafesini hesaplayınız
+
+#ÇÖZÜM
+
+# Minkowski mesafesini hesaplama (p=3)
+p <- 3
+minkowski_mesafe <- dist(data[,-1], method = "minkowski", p = p)
+print(as.matrix(minkowski_mesafe))
+
+#ÇIKTI:
+          1         2        3
+1   0.00000  50.00018 105.0002
+2  50.00018   0.00000 155.0000
+3 105.00021 155.00001   0.0000
 
 
 
